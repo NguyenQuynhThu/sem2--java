@@ -1,48 +1,25 @@
 package session3;
 
-import java.util.Scanner;
+public class User {
 
-public class TamGiac {
-    public int a;
-    public int b;
-    public int c;
+    public int id;
+    public String name;
+    public String email;
+    public String password;
 
-
-    public TamGiac(){
+    public User() {
     }
 
-    public TamGiac(int a, int b, int c){
-        this.a = a;
-        this.b = b;
-        this.c = c;
-    }
-
-    public void nhap3Canh() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Nhap canh a: ");
-        a = scanner.nextInt();
-        System.out.print("Nhap canh b: ");
-        b = scanner.nextInt();
-        System.out.print("Nhap canh c: ");
-        c = scanner.nextInt();
-
-    }
-
-
-
-
-
-    public boolean kiemTraBaCanh(){
-        if ((a + b > c) || (a + c > b) || (b + c > a)) {
-            System.out.println("Đây là tam giác !");
-            return true;
-        }
+    public User(int id, String name, String email, String password) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.password = password;
     }
 
     public static void main(String args[]){
-        TamGiac tg = new TamGiac();
+        User u1 = new User();
 
+        User u2 = new User(1,"Le van A","aa@gmail.com","123456");
     }
 }
-
-
